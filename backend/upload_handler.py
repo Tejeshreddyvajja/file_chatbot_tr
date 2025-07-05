@@ -1,22 +1,4 @@
-# import os
-# from fastapi import UploadFile
-# from vectordb import store_file
 
-# # This async function handles the uploaded file
-# async def handle_file_upload(file: UploadFile):
-#     # Make sure the 'data' directory exists
-#     os.makedirs("data", exist_ok=True)
-
-#     # Save uploaded file to disk
-#     filepath = f"data/{file.filename}"
-#     with open(filepath, "w", encoding="utf-8") as f:
-#         contents = await file.read()
-#         f.write(contents.decode("utf-8"))
-
-#     # Now process and store in VectorDB
-#     store_file(filepath)
-
-#     return {"message": f"{file.filename} uploaded and stored successfully."}
 import os
 import pandas as pd
 from typing import Union
