@@ -12,7 +12,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Vite runs on 5173 by default
+    allow_origins=[
+        "http://localhost:5173",  # Vite runs on 5173 by default
+        "https://your-frontend-domain.vercel.app",  # Replace with your actual frontend URL
+        "*"  # Allow all origins for now (remove this in production)
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
